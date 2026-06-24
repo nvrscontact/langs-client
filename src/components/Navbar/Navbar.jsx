@@ -26,8 +26,8 @@ function Navbar() {
                 <div>
                     <h3>Alonso Nuñez</h3>
                     <p>
-                        <span>Currently B2 level in <img src={fr_flag} alt="" /> </span>
-                        <span>Registered in 2025</span>
+                        <span>Software Engineer</span>
+                        <span>Currently B2 in <img src={fr_flag} alt="" /> </span>
                     </p>
                 </div>
             </div>

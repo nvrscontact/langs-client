@@ -1,0 +1,217 @@
+.cardCarrousel {
+
+    display: flex;
+    align-items: start;
+    height: 500px;
+    overflow-x: auto;
+    gap: 25px;
+
+    .countryFlag {
+        width: 30px;
+        height: 30px;
+        border-radius: 25px;
+        border: 1px solid var(--white-4);
+        opacity: 0.7;
+    }
+
+    .infoIcon {
+        width: 20px;
+        height: 25px;
+        opacity: 0.6;
+        margin-right: 6px;
+    }
+
+    .countryIcon {
+        width: 12px;
+        height: 10px;
+    }
+
+}
+
+.cardCarrousel .languageCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+    height: 360px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    /*
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#111, #111) padding-box,
+        linear-gradient(45deg, #505050, #505050, #ffffff, #505050, #505050) border-box;
+
+        p {
+            font-weight: 300;
+        }
+
+    */
+
+    border: 1px solid var(--white-3);
+
+}
+
+.cardCarrousel .languageCard header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+
+    border-bottom: 1px solid var(--white-3);
+    z-index: 10;
+    background-color: var(--black-6);
+    backdrop-filter: blur(2px);
+
+    margin-bottom: 20px;
+
+    section div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section div span {
+        font-size: 13px;
+    }
+
+    section div section span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+    }
+}
+
+.countryBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: 70px;
+}
+
+.cardCarrousel .languageCard header section div section {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cardCarrousel .languageCard header>section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardCarrousel .languageCard main {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 8px 14px;
+    gap: 20px;
+
+
+
+    article {
+        display: flex;
+        align-items: start;
+        gap: 8px;
+    }
+
+    article div {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    article div span {
+        color: var(--white-5);
+        font-size: 14px;
+    }
+
+
+    article div p {
+        color: var(--white-7);
+    }
+
+    article img {
+        width: 22px;
+        height: 22px;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+
+    p {
+        font-weight: 700;
+        font-size: var(--text-lg);
+    }
+
+    article:nth-of-type(2) {
+        display: flex;
+        justify-content: end;
+        text-align: end;
+    }
+
+}
+
+.cardCarrousel .languageCard aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 20px;
+
+    h5{
+        margin-bottom: 10px;
+        font-weight: 300;
+    }
+    section {
+        display:flex;
+        gap:15px;
+    }
+    section div {
+        display: flex;
+        gap: 4px;
+    }
+
+    section div span {
+        border-radius: 6px;
+        padding: 4px 6px;
+        font-weight: 200;
+        font-size: var(--text-md);
+    }
+
+    section div span {
+        border: 1px solid transparent;
+        background:
+            linear-gradient(#111, #111) padding-box,
+            linear-gradient(45deg, #787878, #787878, #787878, #ffffff, #787878, #787878, #787878) border-box;
+        overflow: hidden;
+
+        div {
+            padding: 10px 50px;
+            background-color: var(--white-1);
+        }
+    }
+
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+
+    span {
+        font-size: var(--text-sm);
+        color: var(--white-5);
+        margin-top: 10px;
+        font-weight: 200;
+    }
+}

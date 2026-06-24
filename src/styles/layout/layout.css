@@ -55,3 +55,24 @@ a{
     text-decoration: none;
     color:var(--white-5);
 }
+
+
+
+@keyframes moveGradient {
+    0% {
+        background-position: 200% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated_text_white {
+    background: linear-gradient(20deg, #8d8d8d, #8d8d8d, #ffffff, #ededed, #8d8d8d, #8d8d8d);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: moveGradient 6s linear infinite;
+}

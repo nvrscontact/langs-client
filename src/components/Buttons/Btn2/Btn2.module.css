@@ -1,0 +1,53 @@
+.btn {
+        border: none;
+        border-radius: 10px;
+        font-size: var(--text-md);
+        border: 1px solid transparent;
+        background:
+                linear-gradient(#111, #111) padding-box,
+                linear-gradient(45deg, #787878, #787878, #787878, #ffffff, #787878, #787878, #787878) border-box;
+        overflow: hidden;
+
+        div {
+                display: flex;
+                justify-content: space-between;
+                background-color: var(--white-1);
+        }
+
+        p {
+                padding: 12px 40px 12px 50px;
+        }
+
+        section {
+                display:flex;
+                border-left: 1px solid var(--white-3);
+                padding:12px;
+        }
+        
+        img{
+                width: 18px;
+        }
+
+}
+
+
+
+
+@keyframes moveGradient {
+        0% {
+                background-position: 200% 50%;
+        }
+
+        100% {
+                background-position: 0% 50%;
+        }
+}
+
+.animated_text_white {
+        background: linear-gradient(20deg, #ffffff, #ffffff, #ffffff, #888888, #ffffff, #ffffff, #ffffff);
+        background-size: 200% 100%;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        animation: moveGradient 6s linear infinite;
+}

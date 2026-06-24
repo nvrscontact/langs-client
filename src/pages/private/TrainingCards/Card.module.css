@@ -207,21 +207,3 @@
 }
 
 
-
-@keyframes moveGradient {
-    0% {
-        background-position: 200% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.animated_text {
-    background: linear-gradient(20deg, #606060, #606060, #606060, #606060, #ededed, #ededed, #606060, #606060, #606060, #606060);
-    background-size: 200% 100%;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
