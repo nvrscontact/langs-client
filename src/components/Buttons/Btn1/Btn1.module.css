@@ -19,6 +19,20 @@
         padding:14px 60px;
         border-radius: 4px;
 
+
+        span:nth-of-type(1){
+            display:flex;
+            align-items: center;
+            gap:10px;
+        }
+
+        span:nth-of-type(1) img{
+            width:25px;
+            height:18px;
+            opacity:0.7;
+            border-radius: 4px;
+        }
+
         span:nth-of-type(2) {
             margin-top: 2px;
             font-size: var(--text-sm);

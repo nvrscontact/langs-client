@@ -23,18 +23,10 @@ function TrainingCards() {
       {step === 1 && (
         <div className={`${card.sec}`} >
 
-          <section className={card.infoTopCard}>
-            <div>
-              <b>1.</b>
-            </div>
 
-            <div>
-              <h4>Writing · Reading</h4>
-              <span>It takes &lt;2 minutes</span>
-            </div>
 
-            <img src={uk_flag} alt="" />
-
+          <section className={card.topInfoCard}>
+            <span>It takes &lt;2 minutes</span>
           </section>
 
           <section className={card.card}>
@@ -73,6 +65,12 @@ function TrainingCards() {
 
           </section>
 
+          <section className={card.bottomInfoCard}>
+            <p>Listening</p> •
+            <p>Writing</p> •
+            <p>Reading</p>
+          </section>
+
           <div onClick={() => setStep(2)}>
             <Btn1 text1="Avanzar" text2="siguiente paso" />
           </div>
@@ -100,7 +98,7 @@ function TrainingCards() {
               <h3>¿What is your name?</h3>
             </div>
 
-           <div className={card.answer}>
+            <div className={card.answer}>
               <label className={card.answer__input} htmlFor="upload">
                 <span>Sube una foto del papel en el  <br />que escribiste las respuestas.</span>
                 <div>
@@ -150,7 +148,7 @@ function TrainingCards() {
               <p>¿Reconocí alguna palabra nueva, algunos detalles, la idea principal o ideas secundarias?</p>
             </div>
 
-           <div className={card.answer}>
+            <div className={card.answer}>
               <label className={card.answer__input} htmlFor="upload">
                 <span>Reproduce un audio  <br />con las respuestas.</span>
                 <div>

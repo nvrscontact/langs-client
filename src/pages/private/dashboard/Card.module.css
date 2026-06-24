@@ -263,13 +263,3 @@ footer {
     height:1px;
     background: #333;
 }
-
-.header::after{
-    content:"";
-    position:absolute;
-    left:0;
-    top:-50px;
-    width:1px;
-    height:140px;
-    background:#333;
-}

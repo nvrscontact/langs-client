@@ -26,7 +26,7 @@ function Navbar() {
 
                 <section className={styles.pictureProfile}>
                     <Link to="/user-profile">
-                    <img src={profile_one} alt="" />
+                        <img src={profile_one} alt="" />
                     </Link>
                 </section>
 
@@ -34,18 +34,18 @@ function Navbar() {
                     <h4>Alonso Nuñez</h4>
                     <span>Software Developer</span>
                 </section>
-                
-                <div>
-                    
-                <section className={styles.languageOptions}>
-                    <span>A1</span>
-                    <img src={uk_flag} alt="" />
-                </section>
 
-                <section className={styles.navigationMenu}
-                    onClick={() => setIsOpen(!isOpen)}>
-                    <img src={menu} alt="" />
-                </section>
+                <div>
+
+                    <section className={styles.languageOptions}>
+                        <span>A1</span>
+                        <img src={uk_flag} alt="" />
+                    </section>
+
+                    <section className={styles.navigationMenu}
+                        onClick={() => setIsOpen(!isOpen)}>
+                        <img src={menu} alt="" />
+                    </section>
 
 
                 </div>
@@ -68,18 +68,18 @@ function Navbar() {
                     <li> <Link to="/social-chat">Social</Link></li>
                     <br />
 
+                    <li> <Link to="/config">Configuration</Link></li>
+
                     <details>
-                        <summary><img src={arrow_down} alt="" /> More Info</summary>
+                        <summary><img src={arrow_down} alt="" />Interesting Info</summary>
                         <div>
                             <li> <Link to="/methodology">Methodology</Link></li>
                             <li> <Link to="/science-based">Science-based</Link></li>
-
                         </div>
                     </details>
-                    <li> <Link to="/config">Configuration</Link></li>
 
                     <details className={styles.app_language}>
-                        <summary> <img src={arrow_down} alt="" />  App Language</summary>
+                        <summary> <img src={arrow_down} alt="" />App Language</summary>
                         <div >
                             <li> <Link to="/real-life-situations"> <img src={sp_flag} alt="" /> Spanish</Link></li>
                             <li> <Link to="/real-life-situations"> <img src={uk_flag} alt="" /> English</Link></li>

@@ -1,5 +1,4 @@
 .sec {
-    margin: 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,35 +15,24 @@
     max-width: 320px;
 }
 
-.infoTopCard {
+.topInfoCard{
+    color:var(--white-7);
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+.bottomInfoCard {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap:50px;
-    padding:0 20px;
+    padding:0 30px;
+    gap:15px;
     width:100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-weight: 200;
+    color:var(--white-5);
     
-    div b{
-        font-weight: 700;
-        color:var(--white-5);
-    }
     div{
         display:flex;
         flex-direction: column;
-        text-align: center;
-    
-        h4 {
-            margin-bottom: 5px;
-            color: var(--white-5);
-        }
-    
-        span {
-            color: var(--white-6);
-            font-size: var(--text-sm);
-        }
-    
     }
 
     img{

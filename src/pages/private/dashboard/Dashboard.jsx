@@ -1,18 +1,15 @@
 import React from 'react'
 import fr_flag from '../../../assets/icons/fr_flag.svg';
 import sp_flag from '../../../assets/icons/sp_flag.svg';
-import uk_flag from '../../../assets/icons/uk_flag.svg';
+import uk_flag from '../../../assets/icons/uk_flag.png';
 import { Link } from 'react-router-dom';
 import louvre from '../../../assets/icons/louvre.png';
 import country from '../../../assets/icons/country.svg';
 
 import france_bg from '../../../assets/imgs/france_bg.jpg';
-import spain_bg from '../../../assets/imgs/spain_bg.jpg';
-import uk_bg from '../../../assets/imgs/uk_bg.jpeg';
 
 import profile_one from '../../../assets/imgs/profile_one.jpg';
 import profile_two from '../../../assets/imgs/profile_two.webp';
-import hero_square from '../../../assets/icons/hero_square.svg';
 import dark_map from '../../../assets/imgs/dark_map.png';
 
 import flower_hero from '../../../assets/imgs/flower_hero.png';
@@ -61,7 +58,7 @@ function Dashboard() {
           <span>Remember, you're getting <br /> closer every day</span>
         </div>
 
-        <Link to="/training"><Btn1 text1="Start" /></Link>
+        <Link to="/training"><Btn1 text1="Start" img={uk_flag} /></Link>
       </section>
 
       <section className={cards.languages}>
