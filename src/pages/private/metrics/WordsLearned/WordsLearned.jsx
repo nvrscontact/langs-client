@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import styles from './WordsLearned.module.css';
-import readWords from '../../../../services/hooks/readWords';
-import { addWord } from '../../../../services/hooks/addWord';
+import findAll from '../../../../services/hooks/findAll';
+import { addRow } from '../../../../services/hooks/addRow';
 
 
 function WordsLearned() {
 
-  const words = readWords();
+  const words = findAll("words");
 
   const [languageId, setLanguageId] = useState(0);
   const [word, setWord] = useState("");
@@ -14,14 +14,15 @@ function WordsLearned() {
 
  function handleSubmit(){
 
-    /* We create an object and we send it as parameter to addWord function*/
-    const newWord = {
+    /* At the end of the obj we need to specify on what table we want to put this object */
+    const word = {
       language_id: languageId,
       word:word,
-      level:level
+      level:level,
+      table_name:"words"
     };
 
-    addWord(newWord);
+    addRow(row);
 
   }
 
@@ -56,7 +57,7 @@ function WordsLearned() {
 
           <div>
             {words.map(w => ( 
-              <p key={w.id}>{w.word}</p>
+              <p key={w.id}>{w.language_id} {w.word}</p>
             ) )}
           </div>
         </details>

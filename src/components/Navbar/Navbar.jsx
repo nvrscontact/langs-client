@@ -39,7 +39,7 @@ function Navbar() {
 
                     <section className={styles.languageOptions}>
                         <span>A1</span>
-                        <img src={uk_flag} alt="" />
+                        <img src={fr_flag} alt="" />
                     </section>
 
                     <section className={styles.navigationMenu}
@@ -61,7 +61,6 @@ function Navbar() {
                             <li> <Link to="/real-life-situations">Real-Life Situations</Link></li>
                             <li> <Link to="/grammar-learned">Grammar Learned</Link></li>
                             <li> <Link to="/words-learned">Words Learned</Link></li>
-                            <li> <Link to="/cefr-aligned">CEFR-Aligned</Link></li>
 
                         </div>
                     </details>
@@ -72,6 +71,7 @@ function Navbar() {
                         <summary><img src={arrow_down} alt="" />Interesting</summary>
                         <div>
                             <li> <Link to="/methodology">Methodology</Link></li>
+                            <li> <Link to="/cefr-aligned">CEFR-Aligned</Link></li>
                             <li> <Link to="/science-based">Science-based</Link></li>
                         </div>
                     </details>
