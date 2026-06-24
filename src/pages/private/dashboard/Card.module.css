@@ -1,7 +1,4 @@
-
-
-.cardCarrousel {
-
+.cardsCarrousel {
     display: flex;
     align-items: center;
     height: 600px;
@@ -13,13 +10,12 @@
         height: 30px;
         border-radius: 25px;
         border: 1px solid var(--white-4);
-        opacity: 0.7;
+        opacity: 0.9;
     }
 
     .infoIcon {
         width: 20px;
         height: 25px;
-        opacity: 0.6;
         margin-right: 6px;
     }
 
@@ -39,7 +35,7 @@
 
 }
 
-.cardCarrousel .languageCard {
+.languageCard {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -66,7 +62,7 @@
 
 }
 
-.cardCarrousel .languageCard header {
+.languageCard header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -77,22 +73,9 @@
     background-color: var(--black-6);
     backdrop-filter: blur(2px);
 
-    margin-bottom: 20px;
-
-    section div {
+    .infoLanguage {
         display: flex;
         flex-direction: column;
-    }
-
-    section div span {
-        font-size: 13px;
-    }
-
-    section div section span {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-
     }
 }
 
@@ -104,26 +87,45 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
-    height: 70px;
+    height:70px;
 }
 
-.cardCarrousel .languageCard header section div section {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+.infoLanguage {
+    color:white;
+    section {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
+    span {
+        color: var(--white-6);
+        font-size: 13px;
+    }
 }
 
-.cardCarrousel .languageCard header>section {
+.languageCard header>section {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.cardCarrousel .languageCard main {
+.languageCard main{
+}
+
+.languageCard main .sec_one{
+    border:1px solid red;
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 0 15px;
+    margin-bottom: 30px;
 
     article {
         display: flex;
@@ -141,7 +143,6 @@
 
     article div {
         background-color: var(--white-1);
-        border: 1px solid var(--white-1);
         border-radius: 6px;
         padding: 12px 12px;
         display: flex;
@@ -178,7 +179,6 @@
         height: 26px;
         border-radius: 5px;
         object-fit: cover;
-        border: 1px solid var(--white-3);
 
     }
 
@@ -189,7 +189,13 @@
 
 }
 
-.cardCarrousel .languageCard aside {
+ .sec_two{
+    background-color: var(--white-1);
+    padding:20px;
+    margin:0 5px;
+}
+
+.languageCard aside {
     display: flex;
     flex-direction: column;
     align-items: center;

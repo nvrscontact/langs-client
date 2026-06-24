@@ -18,9 +18,10 @@
 
 .infoTopCard {
     display: flex;
-    justify-content: space-between;
-    padding:0 20px;
+    justify-content: center;
     align-items: center;
+    gap:50px;
+    padding:0 20px;
     width:100%;
     margin-bottom: 20px;
     font-weight: 200;
@@ -34,7 +35,7 @@
         flex-direction: column;
         text-align: center;
     
-        h5 {
+        h4 {
             margin-bottom: 5px;
             color: var(--white-5);
         }
@@ -47,8 +48,8 @@
     }
 
     img{
-        width:20px;
-        opacity:0.7;
+        width:30px;
+        opacity:0.8;
     }
 
 }
@@ -192,7 +193,7 @@
 }
 
 
-.third_card,
+.third_card, 
 .fourth_card {
     video {
         height: 300px;

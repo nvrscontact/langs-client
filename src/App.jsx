@@ -2,10 +2,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/layout/layout.css';
 
 import Dashboard from "./pages/private/dashboard/Dashboard";
-import AlignmentMCER from "./pages/private/info/AlignmentMCER/AlignmentMCER";
-import Methodology from "./pages/private/info/Methodology/Methodology";
+import CFER_Aligned from "./pages/private/metrics/CFERAligned/CFERAligned";
+import Methodology from "./pages/public/info/Methodology/Methodology";
 import ProgressChart from "./pages/private/metrics/ProgressChart/ProgressChart";
-import MCERChart from "./pages/private/metrics/MCERChart/MCERChart";
 
 import UserProfile from "./pages/private/UserProfile/UserProfile";
 import Register from "./pages/public/auth/Register/Register";
@@ -14,7 +13,7 @@ import MainLayout from './components/MainLayout/MainLayout';
 import NoNavbarLayout from './components/MainLayout/NoNavbarLayout';
 
 import SocialChat from "./pages/private/SocialChat/SocialChat";
-import WordsChart from "./pages/private/metrics/WordsChart/WordsChart";
+import WordsLearned from "./pages/private/metrics/WordsLearned/WordsLearned";
 import TrainingCards from "./pages/private/TrainingCards/TrainingCards";
 import Config from './pages/private/Config/Config';
 
@@ -35,11 +34,10 @@ function App() {
             <Route path="/" element={<Home />} /> {/* public */}
             <Route path="/register" element={<Register />} /> {/* public */}
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/alignment-mcer" element={<AlignmentMCER />} />
+            <Route path="/cfer-aligned" element={<CFER_Aligned />} />
             <Route path="/methodology" element={<Methodology />} />
             <Route path="/progress-chart" element={<ProgressChart />} />
-            <Route path="/words-chart" element={<WordsChart />} />
-            <Route path="/mcer-chart" element={<MCERChart />} />
+            <Route path="/words-learned" element={<WordsLearned />} />
             <Route path="/training" element={<TrainingCards />} />
             <Route path="/config" element={<Config />} />
           </Route>

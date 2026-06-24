@@ -1,9 +1,9 @@
 import React from 'react'
 
-function WordsChart() {
+function WordsLearned() {
   return (
     <div>WordsChart</div>
   )
 }
 
-export default WordsChart
+export default WordsLearned

@@ -27,7 +27,7 @@ function TrainingCards() {
             </div>
 
             <div>
-              <h5>Writing · Reading</h5>
+              <h4>Writing · Reading</h4>
               <span>It takes &lt;2 minutes</span>
             </div>
 
@@ -87,7 +87,7 @@ function TrainingCards() {
             </div>
 
             <div>
-              <h5>Writing · Reading</h5>
+              <h4>Writing · Reading</h4>
               <span>It takes &lt;2 minutes</span>
             </div>
 
@@ -128,7 +128,7 @@ function TrainingCards() {
             </div>
 
             <div>
-              <h5>Listening · Reading · Writing</h5>
+              <h4>Listening · Reading · Writing</h4>
               <span>It takes &lt; 6 minutes</span>
             </div>
 
@@ -180,7 +180,7 @@ function TrainingCards() {
             </div>
 
             <div>
-              <h5>Writing · Reading</h5>
+              <h4>Writing · Reading</h4>
               <span>It takes &lt;5 minutes</span>
             </div>
 
@@ -233,7 +233,7 @@ function TrainingCards() {
             </div>
 
             <div>
-              <h5>Writing · Reading</h5>
+              <h4>Writing · Reading</h4>
               <span>It takes &lt;2 minutes</span>
             </div>
 

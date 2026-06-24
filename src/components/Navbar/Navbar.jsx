@@ -43,9 +43,9 @@ function Navbar() {
                 <details>
                     <summary><img src={arrow_down} alt="" /> Progress</summary>
                     <div>
-                        <li> <Link to="/progress-chart">Global Chart</Link></li>
-                        <li> <Link to="/methodology">Situations</Link></li>
-                        <li> <Link to="/alignment-mcer">MCER Chart</Link></li>
+                        <li> <Link to="/real-life-situations">Real-Life Situations</Link></li>
+                        <li> <Link to="/words-learned">Words Learned</Link></li>
+                        <li> <Link to="/cefr-aligned">CFER-Aligned</Link></li>
                     </div>
                 </details>
                 <li> <Link to="/social-chat">Social</Link></li>
@@ -54,9 +54,7 @@ function Navbar() {
                 <details>
                     <summary><img src={arrow_down} alt="" /> More Info</summary>
                     <div>
-                        <li> <Link to="/alignment-mcer">Alignment MCER</Link></li>
                         <li> <Link to="/methodology">Methodology</Link></li>
-                        <li> <Link to="/progress-chart">Progress</Link></li>
                     </div>
                 </details>
                 <li> <Link to="/config">Configuration</Link></li>
