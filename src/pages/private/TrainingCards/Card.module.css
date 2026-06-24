@@ -1,0 +1,140 @@
+.sec {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: rgba(153, 153, 153, 0.1);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 1px solid rgb(97, 97, 97);
+    overflow: hidden;
+    background-color: black;
+    margin-bottom: 20px;
+}
+
+.infoTopCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+
+    margin-bottom: 20px;
+    font-weight: 200;
+
+    h4 {
+        margin-bottom: 5px;
+        color: var(--white-4);
+    }
+
+    span {
+        color: var(--white-4);
+    }
+}
+
+
+
+.paragraph {
+    padding: 15px 15px;
+    margin: 4px 4px;
+    background-color: var(--white-1);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid var(--white-2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    h3 {
+        line-height: 1.5;
+        font-weight: 600;
+        color: var(--white-5);
+
+        span {
+            color: var(--white-8);
+          
+        }
+      
+    }
+
+    p {
+        margin-bottom: 4px;
+        color: var(--white-8);
+
+        b {
+            font-weight: 600;
+        }
+
+        i {
+            color: var(--white-5);
+            font-weight: 300;
+        }
+    }
+}
+
+.question {
+    color: var(--white-6);
+
+    p {
+        background-color: var(--white-1);
+        margin: 0 4px;
+        padding: 14px 10px;
+        border-bottom: 1px solid var(--white-1);
+        font-weight: 200;
+        line-height: 1.4;
+    }
+
+    margin-bottom: 10px;
+
+}
+
+.answer {
+    color: var(--white-4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 20px 30px 20px;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        img {
+            opacity: 0.6;
+        }
+
+        img:nth-of-type(1) {
+            width: 80px;
+        }
+
+        img:nth-of-type(2) {
+            width: 20px;
+        }
+
+    }
+
+    input {
+        display: none;
+    }
+}
+
+
+.third_card,
+.fourth_card {
+    video {
+        height: 300px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .paragraph {
+        padding: 0;
+        margin: 0;
+    }
+}
