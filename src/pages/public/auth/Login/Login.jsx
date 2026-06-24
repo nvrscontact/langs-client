@@ -1,31 +1,43 @@
 import React, { useState } from 'react'
+import loginUser from '../../../../services/hooks/loginUser';
 
 function Login() {
 
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState(""); 
+  const [password, setPassword] = useState("");
 
-  function login(){
+  async function tryLogin() {
+    
+    const intent = {
+      email: email,
+      passwordHash:password
+    };
 
+    const response = await loginUser(intent);
 
+   console.log(response);
   }
 
   return (
     <>
-     <h1>Porfavor logueate</h1>
+      <h1>Porfavor logueate</h1>
 
       <label htmlFor=""> Email
-        <input type="text"
-         value={email}
-         onClick={() => setEmail()}
-         />
+        <input
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
       </label> <br />
 
       <label htmlFor=""> Contraseña
-        <input type="text" value={password} />
+        <input
+          type="text"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)} />
       </label>
 
-      <button onClick={() => login()}></button>
+      <button onClick={() => tryLogin()}>Enviar</button>
 
     </>
   )
