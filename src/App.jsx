@@ -34,6 +34,8 @@ function App() {
             <Route path="/social-chat" element={<SocialChat />} /> {/* private */}
             <Route path="/register" element={<Register />} /> {/* public */}
             <Route path="/login" element={<Login />} /> {/* public */}
+            <Route path="/training" element={<TrainingCards />} />
+            
           </Route>
 
           <Route element={<MainLayout />}>
@@ -44,7 +46,6 @@ function App() {
             <Route path="/real-life-situations" element={<RealLifeSituations />} />
             <Route path="/grammar-learned" element={<GrammarLearned />} />
             <Route path="/words-learned" element={<WordsLearned />} />
-            <Route path="/training" element={<TrainingCards />} />
             <Route path="/config" element={<Config />} />
 
             <Route path="/methodology" element={<Methodology />} />

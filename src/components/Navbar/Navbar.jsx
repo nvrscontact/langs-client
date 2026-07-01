@@ -1,32 +1,33 @@
 import React, { useState } from 'react'
-import fr_flag from '../../assets/icons/fr_flag.svg'
-import sp_flag from '../../assets/icons/sp_flag.svg'
-import uk_flag from '../../assets/icons/uk_flag.svg'
-
-import arrow_down from '../../assets/icons/arrow_down.svg'
-
-import navbar_menu from '../../assets/icons/navbar_menu.svg'
-import profile_one from '../../assets/imgs/profile_one.jpg'
-import profile_two from '../../assets/imgs/profile_two.webp'
-
-import menu from '../../assets/icons/menu.svg'
-
-
 import styles from './Navbar.module.css'
 import { Link } from 'react-router-dom'
+
+import profileOne from '../../assets/imgs/profileOne.jpg'
+
+
+import arrowDown from '../../assets/icons/arrowDown.svg'
+import config from '../../assets/icons/config.svg'
+import logout from '../../assets/icons/logout.svg'
+import starWhite from '../../assets/icons/starWhite.svg'
+import hamburgerMenu from '../../assets/icons/hamburgerMenu.svg'
+import frFlag from '../../assets/icons/frFlag.svg'
+import spFlag from '../../assets/icons/spFlag.svg'
+import ukFlag from '../../assets/icons/ukFlag.svg'
+
+
 
 function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className={styles.navbarSec} >
+        <header className={styles.headerContainer} >
 
             <nav className={styles.navbarMenu}>
 
                 <section className={styles.pictureProfile}>
                     <Link to="/user-profile">
-                        <img src={profile_one} alt="" />
+                        <img src={profileOne} alt="" />
                     </Link>
                 </section>
 
@@ -39,28 +40,27 @@ function Navbar() {
 
                     <section className={styles.languageOptions}>
                         <span>A1</span>
-                        <img src={sp_flag} alt="" />
+                        <img src={spFlag} alt="" />
                     </section>
 
                     <section className={styles.navigationMenu}
                         onClick={() => setIsOpen(!isOpen)}>
-                        <img src={menu} alt="" />
+                        <img src={hamburgerMenu} alt="" />
                     </section>
 
-
                 </div>
-
 
 
                 <ul className={`${styles.list} ${isOpen ? styles.open : ""} `} >
                     <li> <Link to="/dashboard">Home</Link></li>
                     <li> <Link to="/training">Training</Link></li>
                     <details>
-                        <summary><img src={arrow_down} alt="" /> Progress</summary>
+                        <summary><img src={arrowDown} alt="" /> Progress</summary>
                         <div>
                             <li> <Link to="/real-life-situations">Real-Life Situations</Link></li>
-                            <li> <Link to="/grammar-learned">Grammar Learned</Link></li>
-                            <li> <Link to="/words-learned">Words Learned</Link></li>
+                            <li> <Link to="/words-learned">Active Words</Link></li>
+                            <li> <Link to="/words-learned">Vocabulary</Link></li>
+                            <li> <Link to="/grammar-learned">Grammar</Link></li>
 
                         </div>
                     </details>
@@ -68,25 +68,30 @@ function Navbar() {
                     <br />
 
                     <details>
-                        <summary><img src={arrow_down} alt="" />Interesting</summary>
+                        <summary><img src={arrowDown} alt="" />Interesting</summary>
                         <div>
                             <li> <Link to="/methodology">Methodology</Link></li>
                             <li> <Link to="/cefr-aligned">CEFR-Aligned</Link></li>
                             <li> <Link to="/science-based">Science-based</Link></li>
                         </div>
                     </details>
-                    <li> <Link to="/config">Configuration</Link></li>
 
-                    <details className={styles.app_language}>
-                        <summary> <img src={arrow_down} alt="" />App Language</summary>
+                    <details className={styles.appLanguageSelect}>
+                        <summary> <img src={arrowDown} alt="" />App Language</summary>
                         <div >
-                            <li> <Link to="/real-life-situations"> <img src={sp_flag} alt="" /> Spanish</Link></li>
-                            <li> <Link to="/real-life-situations"> <img src={uk_flag} alt="" /> English</Link></li>
-                            <li> <Link to="/real-life-situations"> <img src={fr_flag} alt="" /> Francais</Link></li>
+                            <li> <Link to="/real-life-situations"> <img src={spFlag} alt="" /> Spanish</Link></li>
+                            <li> <Link to="/real-life-situations"> <img src={ukFlag} alt="" /> English</Link></li>
+                            <li> <Link to="/real-life-situations"> <img src={frFlag} alt="" /> Francais</Link></li>
 
                         </div>
                     </details>
 
+                    <section className={styles.dropdownIconsBelow}>
+                        <Link to="/configuration"> <img src={logout} alt="" /></Link>
+                        <Link to="/configuration"> <img src={starWhite} alt="" /></Link>
+                        <Link to="/configuration"> <img src={config} alt="" /></Link>
+
+                    </section>
                 </ul>
 
             </nav>

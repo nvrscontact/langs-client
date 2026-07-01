@@ -1,28 +1,46 @@
 import React from 'react'
-import fr_flag from '../../../assets/icons/fr_flag.svg';
-import sp_flag from '../../../assets/icons/sp_flag.svg';
-import uk_flag from '../../../assets/icons/uk_flag.png';
 import { Link } from 'react-router-dom';
-import louvre from '../../../assets/icons/louvre.png';
-import country from '../../../assets/icons/country.svg';
-
-import france_bg from '../../../assets/imgs/france_bg.jpg';
-
-import profile_one from '../../../assets/imgs/profile_one.jpg';
-import profile_two from '../../../assets/imgs/profile_two.webp';
-import dark_map from '../../../assets/imgs/dark_map.png';
-import snowy from '../../../assets/icons/snowy.svg';
-
 import cards from './Card.module.css';
 import dashboard from './Dashboard.module.css';
 
 import Btn2 from '../../../components/Buttons/Btn2/Btn2';
 import Btn1 from '../../../components/Buttons/Btn1/Btn1';
 
+import franceBg from '../../../assets/imgs/franceBg.png';
+import profileOne from '../../../assets/imgs/profileOne.jpg';
+import profileTwo from '../../../assets/imgs/profileTwo.webp';
+
+import darkMap from '../../../assets/imgs/darkMap.png';
+
+
+import frFlag from '../../../assets/icons/frFlag.svg';
+import spFlag from '../../../assets/icons/spFlag.svg';
+import ukFlag from '../../../assets/icons/ukFlag.svg';
+import louvre from '../../../assets/icons/louvre.png';
+import snowy from '../../../assets/icons/snowy.svg';
+
+
+
 function Dashboard() {
 
   const hour = new Date().getHours();
   const minutes = new Date().getMinutes();
+
+  let hourFormatted = "";
+  let minutesFormatted = "";
+
+  if (hour < 10) {
+    hourFormatted = 0 + "" + hour;
+  } else {
+    hourFormatted = hour;
+  }
+
+  if (minutes < 10) {
+    minutesFormatted = 0 + "" + minutes;
+  } else {
+    minutesFormatted = minutes;
+  }
+
 
   let dayMessage = "";
   if (hour >= 6 && hour <= 11) {
@@ -45,7 +63,7 @@ function Dashboard() {
           <div>
             <span>Kuznetosva</span>.
             <p className={dashboard.date}>
-              <span>{hour}:{minutes}</span>
+              <span>{hourFormatted}:{minutesFormatted}</span>
               <span><img src={snowy} alt="" /></span> </p>
           </div>
         </header>
@@ -60,39 +78,71 @@ function Dashboard() {
             <span>Remember, you're getting <br /> closer every day</span>
           </header>
 
-          <Link to="/training"><Btn1 text1="Start" img={uk_flag} /></Link>
+          <Link to="/training"><Btn1 text1="Continue" img={ukFlag} /></Link>
         </div>
       </section>
 
       <section className={dashboard.stadisticsContainer}>
         <div className={dashboard.stadistics}>
 
-        <h4>A1 • English - Learning Progress (55%)</h4><br />
+          <header>
+            <img src={frFlag} alt="" />
+            <div>
+              <h3>English C2</h3>
+              <p>Intermediate</p>
+            </div>
+          </header>
 
-          <p>
-            <h3>Real-Life situations <span>4</span> </h3>
-            <span>you are able to speak and write </span>
-            </p>
+          <article>
+            <div>
+              <p>4</p>
+            </div>
+            <div>
+              <h3 className='degraded-text-white'>Real-Life Situations </h3>
+              <p>You can handle.</p>
+            </div>
+          </article>
+
+          <article>
+            <div>
+              <p>55%</p>
+            </div>
+            <div>
+              <h3 className='degraded-text-white'>Progress </h3>
+              <p>For complete level.</p>
+            </div>
+          </article>
+
+
+          <article>
+            <div>
+              <p>+10</p>
+            </div>
+            <div>
+              <h3 className='degraded-text-white'>Active words </h3>
+              <p>You are confident using.</p>
+            </div>
+          </article>
+
         </div>
       </section>
 
       <section className={cards.languagesContainer}>
-
-        <div className={`${cards.header} header-basic`}>
+        <header className={`header-basic`}>
           <h2>Available Languages</h2>
           <span>for learn on your language</span>
-        </div>
+        </header>
 
         <div className={cards.cardsCarrousel}>
 
-          <section>
+          <section> {/* French */}
 
             <div className={cards.languageCard}>
-              <img className={cards.countryBackground} src={france_bg} alt="" />
+              <img className={cards.countryBackground} src={franceBg} alt="" />
 
               <header>
                 <section>
-                  <img className={cards.countryFlag} src={fr_flag} alt="" />
+                  <img className={cards.countryFlag} src={frFlag} alt="" />
                   <div className={cards.infoLanguage}>
                     <section>
                       <h3>French</h3>
@@ -104,69 +154,70 @@ function Dashboard() {
               </header>
 
               <main>
-                <img className={cards.dark_map} src={dark_map} alt="" />
+                <img className={cards.dark_map} src={darkMap} alt="" />
 
                 <section className={cards.sec_one}>
                   <article>
-                    <img src={profile_two} alt="" />
+                    <img src={profileTwo} alt="" />
                     <div>
-                      <h5>Kate Anderson <span>· 20:19</span> </h5>
-                      <p>Comment vas-tu?</p>
+                      <p>Bonjour</p>
                     </div>
                   </article>
 
                   <article>
                     <div>
-                      <h5><span>20:30 ·</span> Jax Kuznetsova</h5>
-                      <p>Je va bien, merci.</p>
+                      <p>Ca va?</p>
                     </div>
-                    <img src={profile_one} alt="" />
+                    <img src={profileOne} alt="" />
                   </article>
-                </section>
 
+                </section>
 
                 <section className={cards.sec_two}>
-                  <h5>Levels Available</h5>
-                  <section>
-                    <div>
-                      <span>A1 - A2</span>
-                    </div>
-                    <div>
-                      <span>B1 - B2</span>
-                    </div>
-                    <div>
-                      <span>C1 - C2</span>
-                    </div>
-                  </section>
+                  <div>
+                    <p>Strong in Business and Education</p>
+                  </div>
+
+                  <div className={cards.levels}>
+                    Levels:
+                    <span>A1 - A2</span>
+                    <span>B1 - B2</span>
+                    <span>C1 - C2</span>
+                  </div>
+                  <div>
+                    <p>Spoken in +30 countries</p>
+                  </div>
                 </section>
 
-                <section className={cards.sec_three}>
-                  <h4>Spoken in +30 countries</h4>
-                </section>
 
               </main>
 
             </div>
 
             <footer>
-              <Btn2 text1={"Empezar"} img={fr_flag} />
-              <span>Speak with elegance</span>
+              <Link to="/training"><Btn1 text1="Start" img={ukFlag} /></Link>
+              <p className={cards.btnBelowDesc}>Speak with elegance</p>
             </footer>
 
           </section>
 
+        </div>
 
+      </section>
 
-
-
-
+      <section className={dashboard.infoContainer}>
+        <div className={dashboard.info}>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam laborum sequi perspiciatis nemo obcaecati minima.
+          </p>
         </div>
       </section>
 
-      
 
-      <footer>
-        <p>© 2020 Brilliant Technologies </p>
+
+      <footer className={dashboard.footer}>
+        <p>Seraphic</p>
+        <p>© 2026 Brilliant Technologies </p>
       </footer>
 
 

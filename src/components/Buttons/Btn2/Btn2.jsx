@@ -5,7 +5,7 @@ import arrow_link from '../../../assets/icons/arrow_link.svg';
 function Btn2({ text1, img }) {
   return (
     <>
-      <button className={`${styles.btn} ${styles.animated_border_white}`}>
+      <button className={styles.btn}>
         <div>
           <p>
             {text1}

@@ -1,172 +1,178 @@
 import React, { useState } from 'react'
-
-import upload from '../../../assets/icons/upload.svg';
-import img_example from '../../../assets/icons/img_example.svg';
-import improving from '../../../assets/icons/improving.svg';
-import video_test from '../../../assets/video/test.mp4';
-
-import uk_flag from '../../../assets/icons/uk_flag.svg';
-import camera from '../../../assets/icons/camera.svg';
-import microphone from '../../../assets/icons/microphone.svg';
+import styles from './TrainingCards.module.css'
 
 import Btn1 from '../../../components/Buttons/Btn1/Btn1';
+import Card1 from './Card1';
+import microphoneWhite from '../../../assets/icons/microphoneWhite.svg';
+import you from '../../../assets/cards_audio/you.ogg';
+import howare from '../../../assets/cards_audio/howare.ogg';
 
-import card from './Card.module.css';
 
 function TrainingCards() {
   const [step, setStep] = useState(1);
 
+  const updateStep = () => {
+    setStep(prev => prev + 1);
+  }
+
+  const backStep = () => {
+    setStep(prev => prev - 1);
+  }
+
   return (
     <>
 
-      {/* Separarlos en components */}
 
 
       {step === 1 && (
-        <div className={`${card.container}`} >
-
-
-          {/* 
-          <section className={card.topInfoCard}>
-            <span>It takes &lt;2 minutes</span>
-          </section>
-          */}
-
-          <section className={card.article}>
-            <div className={card.header}>
-              <h2> Hello, how are <span>you</span> feeling tonight?, ohh, <span>Where</span> is your friend?</h2>
-              <div className={card.explanation}>
-                <section>
-                  <div>
-                    <h3>You</h3>
-                    <p>significa <b>tú</b></p>
-                  </div>
-                </section>
-
-                <section>
-                  <div>
-                    <h3>Where</h3>
-                    <p>significa <b>donde</b></p>
-                  </div>
-                </section>
-
-              </div>
-            </div>
-
-
-            <div className={card.question}>
-              <p>¿Que palabra uso para referirme a <b>donde</b> ?</p>
-              <p>¿Que palabra uso para referirme a <b>usted/tu</b> ?</p>
-            </div>
-
-
-            <div className={card.answer}>
-              <label className={card.answer__input} htmlFor="upload">
-                <span>Sube una foto del papel en el  <br />que escribiste las respuestas.</span>
-                <div>
-                  <img src={camera} alt="" />
-                </div>
-              </label>
-              <input type="file" name="" id="upload" required />
-            </div>
-
-          </section>
-
-
-          <div onClick={() => setStep(2)}>
-            <Btn1 text1="Avanzar" text2="siguiente paso" />
-          </div>
-        </div>
+        <Card1
+          paragraph={
+            <>
+              Where
+            </>
+          }
+          audio = {you}
+          word1ExplLearning="Where"
+          word1ExplKnown="cuando"
+          firstQuest="cuando"
+          nextStep={updateStep}
+        />
       )}
+
       {step === 2 && (
-        <div className={card.sec} >
-
-          <section className={card.infoTopCard}>
-            <div>
-              <b>2.</b>
-            </div>
-
-            <div>
-              <h4>Writing · Reading</h4>
-              <span>It takes &lt;2 minutes</span>
-            </div>
-
-            <img src={uk_flag} alt="" />
-
-          </section>
-
-          <section className={card.card}>
-            <div className={card.paragraph}>
-              <h3>¿What is your name?</h3>
-            </div>
-
-            <div className={card.answer}>
-              <label className={card.answer__input} htmlFor="upload">
-                <span>Sube una foto del papel en el  <br />que escribiste las respuestas.</span>
-                <div>
-                  <img src={camera} alt="" />
-                </div>
-              </label>
-              <input type="file" name="" id="upload" required />
-            </div>
-
-          </section>
-
-          <div onClick={() => setStep(3)}>
-            <Btn1 text1="Avanzar" text2="siguiente paso" />
-          </div>
-        </div>
+        <Card1
+          paragraph={
+            <>
+              Hello, how are <span>you</span> tonight, where is your friend ?
+            </>
+          }
+          audio = {howare}
+          parag1Expl="como estas?"
+          firstQuest="como estas, Alonso"
+          nextStep={updateStep}
+          backStep={backStep}
+        />
       )}
+
       {step === 3 && (
-        <div className={` ${card.sec} ${card.third_card} `} >
-
-          <section className={card.infoTopCard}>
-            <div>
-              <b>3.</b>
-            </div>
-
-            <div>
-              <h4>Listening · Reading · Writing</h4>
-              <span>It takes &lt; 6 minutes</span>
-            </div>
-
-            <img src={uk_flag} alt="" />
-
-          </section>
-
-          <section className={card.card}>
-            <div className={card.paragraph}>
-              <video controls>
-                <source src={video_test} type="video/mp4" />
-                Your browser don't support the video
-              </video>
-            </div>
-
-            <div className={card.advice}>
-              Puedes volver a reproducir el video
-            </div>
-
-            <div className={card.question}>
-              <p>¿Reconocí alguna palabra nueva, algunos detalles, la idea principal o ideas secundarias?</p>
-            </div>
-
-            <div className={card.answer}>
-              <label className={card.answer__input} htmlFor="upload">
-                <span>Reproduce un audio  <br />con las respuestas.</span>
-                <div>
-                  <img src={microphone} alt="" />
-                </div>
-              </label>
-              <input type="file" name="" id="upload" required />
-            </div>
-
-          </section>
-
-          <div onClick={() => setStep(4)}>
-            <Btn1 text1="Avanzar" text2="siguiente paso" />
-          </div>
-        </div>
+        <Card1
+          paragraph={
+            <>
+              <span>Perro</span>
+            </>
+          }
+          firstQuest="Perro"
+          nextStep={updateStep}
+          backStep={backStep}
+        />
       )}
+
+      {step === 4 && (
+        <Card1
+          paragraph={
+            <>
+              <span>Saludar</span>
+            </>
+          }
+          firstQuest="como estas"
+          nextStep={updateStep}
+          backStep={backStep}
+        />
+      )}
+
+
+      {step === 5 && (
+        <Card1
+          paragraph={
+            <>
+              <span>You, esc</span>
+            </>
+          }
+          firstQuest="tu"
+          answerImage={microphoneWhite}
+          typeAnswerDesc={"2"}
+          nextStep={updateStep}
+          backStep={backStep}
+        />
+      )}
+
+          {step === 6 && (
+        <Card1
+          paragraph={
+            <>
+              <span>How are you, esc</span>
+            </>
+          }
+          firstQuest="como estas"
+          answerImage={"2"}
+          typeAnswerDesc={"2"}
+          nextStep={updateStep}
+          backStep={backStep}
+        />
+      )}
+
+
+       {step === 7 && (
+        <Card1
+          paragraph={
+            <>
+              <span>esc wo</span>
+            </>
+          }
+          thirdQuest="¿Puedes pronunciar lo que has escuchado?"
+          answerImage={"2"}
+          typeAnswerDesc={"2"}
+          nextStep={updateStep}
+          backStep={backStep}
+        />
+      )}
+
+       {step === 8 && (
+        <Card1
+          paragraph={
+            <>
+              <span>esc fr</span>
+            </>
+          }
+          thirdQuest="¿Puedes pronunciar lo que has escuchado?"
+          answerImage={"2"}
+          typeAnswerDesc={"2"}
+          nextStep={updateStep}
+          backStep={backStep}
+        />
+      )}
+
+
+       {step === 9 && (
+        <Card1
+          paragraph={
+            <>
+              <span>¿Where do you live?</span>
+            </>
+          }
+          thirdQuest="¿Puedes responder a lo que has escuchado?"
+          answerImage={"2"}
+          typeAnswerDesc={"2"}
+          nextStep={updateStep}
+          backStep={backStep}
+        />
+      )}
+
+         {step === 10 && (
+        <Card1
+          paragraph={
+            <>
+              <span>Esc quest</span>
+            </>
+          }
+          thirdQuest="¿Puedes responder a lo que has escuchado?"
+          answerImage={"2"}
+          typeAnswerDesc={"2"}
+          nextStep={updateStep}
+          backStep={backStep}
+        />
+      )}
+
 
 
 

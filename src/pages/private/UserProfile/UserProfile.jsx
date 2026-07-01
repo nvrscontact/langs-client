@@ -1,5 +1,5 @@
 import React from 'react'
-import profile_one from '../../../assets/imgs/profile_one.jpg'
+import profileOne from '../../../assets/imgs/profileOne.jpg'
 import styles from './UserProfile.module.css'
 
 function UserProfile() {
@@ -9,7 +9,7 @@ function UserProfile() {
       <article>
 
         <div className={styles.pictureProfile}>
-          <img src={profile_one} alt="" />
+          <img src={profileOne} alt="" />
           <div className={styles.profileBlur}></div>
 
           <footer className={styles.paragraphBlur}>
